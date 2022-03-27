@@ -1,0 +1,102 @@
+<link rel="stylesheet" href="/css/home_page.css" />
+<head>
+    <h1>Cv Builder</h1>
+</head>
+<body>
+    <form
+        data-multi-step
+        class="multi-step-form"
+        method="POST"
+        action="/register"
+    >
+        <h2>Progess</h2>
+        <div class="progressbar">
+            <div class="progress" id="progress"></div>
+            <div
+                class="progress-step progress-step-active"
+                data-title="Intro"
+            ></div>
+            <div class="progress-step" data-title="Profile"></div>
+            <div class="progress-step" data-title="Education"></div>
+            <div class="progress-step" data-title="Project"></div>
+            <div class="progress-step" data-title="Skill"></div>
+            <div class="progress-step" data-title="Link"></div>
+        </div>
+
+        <fieldset class="card" data-step>
+            <h3 class="step-title">Personal Details</h3>
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input
+                    type="text"
+                    name="first_name"
+                    id="first_name"
+                    placeholder=""
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input
+                    type="text"
+                    name="last_name"
+                    id="last_name"
+                    placeholder=""
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder=""
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input
+                    type="text"
+                    name="address"
+                    id="address"
+                    placeholder=""
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Phone Number</label>
+                <input
+                    type="tel"
+                    name="phone_number"
+                    id="phone_number"
+                    placeholder=""
+                    minlength="10"
+                    maxlength="15"
+                    required
+                />
+            </div>
+            <button type="button" data-next class="action-button">Next</button>
+        </fieldset>
+        <fieldset class="card" data-step>
+            <h3 class="step-title">Career Objective</h3>
+            <div class="form-group">
+                <textarea
+                    id="summary"
+                    name="summary"
+                    rows="15"
+                    cols="45"
+                    tabindex="101"
+                    style="height: 171px"
+                ></textarea>
+            </div>
+            <button type="button" data-previous class="action-button">
+                Previous
+            </button>
+            <button type="button" data-next class="action-button">Next</button>
+        </fieldset>
+        <button type="submit" class="action-button">Submit</button>
+    </form>
+</body>
+<script src="/js/script.js"></script>
