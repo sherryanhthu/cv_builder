@@ -1,3 +1,4 @@
+"use strict";
 const multiStepForm = document.querySelector("[data-multi-step]");
 const formSteps = [...multiStepForm.querySelectorAll("[data-step]")];
 const progress = document.getElementById("progress");

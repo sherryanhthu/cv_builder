@@ -1,4 +1,18 @@
+<!-- flatpickr package -->
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+/>
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="https://npmcdn.com/flatpickr/dist/themes/dark.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<link rel="icon" href="/img/favicon.ico" />
 <link rel="stylesheet" href="/css/home_page.css" />
+
 <head>
     <h1>Cv Builder</h1>
 </head>
@@ -18,8 +32,8 @@
             ></div>
             <div class="progress-step" data-title="Profile"></div>
             <div class="progress-step" data-title="Education"></div>
-            <div class="progress-step" data-title="Project"></div>
             <div class="progress-step" data-title="Skill"></div>
+            <div class="progress-step" data-title="Project"></div>
             <div class="progress-step" data-title="Link"></div>
         </div>
 
@@ -96,7 +110,160 @@
             </button>
             <button type="button" data-next class="action-button">Next</button>
         </fieldset>
-        <button type="submit" class="action-button">Submit</button>
+        <fieldset class="card" data-step>
+            <h3 class="step-title">Education</h3>
+            <div class="form-group">
+                <label for="school_name">School</label>
+                <input
+                    type="text"
+                    name="school_name"
+                    id="school_name"
+                    placeholder=""
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="degree">Degree</label>
+                <input
+                    type="text"
+                    name="degree"
+                    id="degree"
+                    placeholder=""
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="description_school">Description</label>
+                <textarea
+                    id="description_school"
+                    name="description_school"
+                    rows="15"
+                    cols="45"
+                    tabindex="101"
+                    placeholder="e.g Graduated with High Honors"
+                    style="height: 171px"
+                ></textarea>
+            </div>
+            <div class="form-group">
+                <label for="start_end_date_school">Start & End Date*</label>
+                <div class="date">
+                    <input
+                        type="text"
+                        name="start_school"
+                        id="start_end_date_school"
+                        placeholder="YYYY-MM"
+                        required
+                    />
+                    <input
+                        type="text"
+                        name="end_school"
+                        id="start_end_date_school"
+                        placeholder="YYYY-MM"
+                        required
+                    />
+                </div>
+            </div>
+            <button type="button" data-previous class="action-button">
+                Previous
+            </button>
+            <button type="button" data-next class="action-button">Next</button>
+        </fieldset>
+        <fieldset class="card" data-step>
+            <h3 class="step-title">Skills</h3>
+            <div class="form-group">
+                <label for="description_skill">Description</label>
+                <textarea
+                    id="description_skill"
+                    name="description_skill"
+                    rows="15"
+                    cols="45"
+                    tabindex="101"
+                    placeholder="e.g soft skill, advanced skill"
+                    style="height: 171px"
+                ></textarea>
+            </div>
+            <button type="button" data-previous class="action-button">
+                Previous
+            </button>
+            <button type="button" data-next class="action-button">Next</button>
+        </fieldset>
+        <fieldset class="card" data-step>
+            <h3 class="step-title">Projects</h3>
+            <div class="form-group">
+                <label for="project_name">Project Title</label>
+                <input
+                    type="text"
+                    name="project_name"
+                    id="project_name"
+                    placeholder=""
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="start_end_date_project">Start & End Date*</label>
+                <div class="date">
+                    <input
+                        type="text"
+                        name="start_project"
+                        id="start_end_date_project"
+                        placeholder="YYYY-MM"
+                        required
+                    />
+                    <input
+                        type="text"
+                        name="end_project"
+                        id="start_end_date_project"
+                        placeholder="YYYY-MM"
+                        required
+                    />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description_skill">Description</label>
+                <textarea
+                    id="description_skill"
+                    name="description_skill"
+                    rows="15"
+                    cols="45"
+                    tabindex="101"
+                    placeholder="e.g soft skill, advanced skill"
+                    style="height: 171px"
+                ></textarea>
+            </div>
+            <button type="button" data-previous class="action-button">
+                Previous
+            </button>
+            <button type="button" data-next class="action-button">Next</button>
+        </fieldset>
+        <fieldset class="card" data-step>
+            <h3 class="step-title">Websites & Social Links</h3>
+            <div class="form-group">
+                <label for="label">Label</label>
+                <input
+                    type="text"
+                    name="link_label"
+                    id="label"
+                    placeholder=""
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="link">Link</label>
+                <input
+                    type="url"
+                    name="link"
+                    id="link"
+                    pattern="https://.*"
+                    size="30"
+                    required
+                />
+            </div>
+            <button type="button" data-previous class="action-button">
+                Previous
+            </button>
+            <button type="submit" class="action-button">Submit</button>
+        </fieldset>
     </form>
 </body>
 <script src="/js/script.js"></script>
+<script src="/js/datetime_local.js"></script>
