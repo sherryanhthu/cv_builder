@@ -10,8 +10,14 @@
 />
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+/>
+
 <link rel="icon" href="/img/favicon.ico" />
 <link rel="stylesheet" href="/css/home_page.css" />
+<link rel="stylesheet" href="/css/contact.css" />
 
 <head>
     <h1>Cv Builder</h1>
@@ -48,6 +54,9 @@
                     placeholder=""
                     required
                 />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
             <div class="form-group">
                 <label for="last_name">Last Name</label>
@@ -58,6 +67,9 @@
                     placeholder=""
                     required
                 />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -68,6 +80,9 @@
                     placeholder=""
                     required
                 />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
             <div class="form-group">
                 <label for="address">Address</label>
@@ -78,6 +93,7 @@
                     placeholder=""
                     required
                 />
+                <small>Error message</small>
             </div>
             <div class="form-group">
                 <label for="phone_number">Phone Number</label>
@@ -90,8 +106,13 @@
                     maxlength="15"
                     required
                 />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
-            <button type="button" data-next class="action-button">Next</button>
+            <button id="next-1" type="button" data-next class="action-button">
+                Next
+            </button>
         </fieldset>
         <fieldset class="card" data-step>
             <h3 class="step-title">Career Objective</h3>
@@ -99,16 +120,17 @@
                 <textarea
                     id="summary"
                     name="summary"
-                    rows="15"
-                    cols="45"
-                    tabindex="101"
-                    style="height: 171px"
+                    placeholder="e.g To work as Software Engineer... "
+                    required
                 ></textarea>
+                <small>Error message</small>
             </div>
             <button type="button" data-previous class="action-button">
                 Previous
             </button>
-            <button type="button" data-next class="action-button">Next</button>
+            <button id="next-2" type="button" data-next class="action-button">
+                Next
+            </button>
         </fieldset>
         <fieldset class="card" data-step>
             <h3 class="step-title">Education</h3>
@@ -137,11 +159,7 @@
                 <textarea
                     id="description_school"
                     name="description_school"
-                    rows="15"
-                    cols="45"
-                    tabindex="101"
                     placeholder="e.g Graduated with High Honors"
-                    style="height: 171px"
                 ></textarea>
             </div>
             <div class="form-group">
@@ -166,7 +184,9 @@
             <button type="button" data-previous class="action-button">
                 Previous
             </button>
-            <button type="button" data-next class="action-button">Next</button>
+            <button id="next-3" type="button" data-next class="action-button">
+                Next
+            </button>
         </fieldset>
         <fieldset class="card" data-step>
             <h3 class="step-title">Skills</h3>
@@ -175,17 +195,15 @@
                 <textarea
                     id="description_skill"
                     name="description_skill"
-                    rows="15"
-                    cols="45"
-                    tabindex="101"
                     placeholder="e.g soft skill, advanced skill"
-                    style="height: 171px"
                 ></textarea>
             </div>
             <button type="button" data-previous class="action-button">
                 Previous
             </button>
-            <button type="button" data-next class="action-button">Next</button>
+            <button id="next-4" type="button" data-next class="action-button">
+                Next
+            </button>
         </fieldset>
         <fieldset class="card" data-step>
             <h3 class="step-title">Projects</h3>
@@ -223,17 +241,15 @@
                 <textarea
                     id="description_skill"
                     name="description_skill"
-                    rows="15"
-                    cols="45"
-                    tabindex="101"
                     placeholder="e.g soft skill, advanced skill"
-                    style="height: 171px"
                 ></textarea>
             </div>
             <button type="button" data-previous class="action-button">
                 Previous
             </button>
-            <button type="button" data-next class="action-button">Next</button>
+            <button id="next-5" type="button" data-next class="action-button">
+                Next
+            </button>
         </fieldset>
         <fieldset class="card" data-step>
             <h3 class="step-title">Websites & Social Links</h3>
@@ -261,9 +277,34 @@
             <button type="button" data-previous class="action-button">
                 Previous
             </button>
-            <button type="submit" class="action-button">Submit</button>
+            <button id="next-6" type="submit" class="action-button">
+                Submit
+            </button>
         </fieldset>
     </form>
+    <div class="social-panel-container">
+        <div class="social-panel">
+            <p>Created by GROUP 6</p>
+            <button class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+            <h4>Get in touch on</h4>
+            <ul>
+                <li>
+                    <a
+                        href="https://github.com/tmhuyy/cv_builder"
+                        target="_blank"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="floating-btn">Contact</button>
 </body>
 <script src="/js/script.js"></script>
 <script src="/js/datetime_local.js"></script>
+<script src="/js/validation.js"></script>
+<script src="/js/auto_resize.js"></script>
+<script src="/js/contact.js"></script>
