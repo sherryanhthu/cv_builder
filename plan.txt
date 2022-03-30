@@ -1,3 +1,6 @@
 <March, 29, 2022> add validator figure to check valid mail, url. <done>
 - add the dynamic form for link, project, education..... <not yet>
 <done contact button>
+<March, 31, 2022> https://www.w3schools.com/howto/howto_js_collapsible.asp 
+or https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible_symbol
+the idea for next config
